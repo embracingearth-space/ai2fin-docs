@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "mintlify dev",
-    "build": "echo 'Mintlify static build completed'",
+    "build": "npm install && npx @mintlify/cli@latest install",
     "preview": "mintlify dev",
     "deploy": "mintlify deploy",
     "start": "mintlify dev",
