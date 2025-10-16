@@ -1,0 +1,357 @@
+# CSV Imports
+
+AI2Fin's CSV Import feature allows you to easily import bank statements, transaction files, and financial data from various sources. This is the primary way to get your financial data into the platform.
+
+## Supported Formats
+
+AI2Fin supports CSV files from most major banks and financial institutions:
+
+<CardGroup cols={2}>
+  <Card title="Bank Statements" icon="university">
+    Direct exports from online banking
+  </Card>
+  <Card title="Credit Card Statements" icon="credit-card">
+    Credit card transaction exports
+  </Card>
+  <Card title="Accounting Software" icon="calculator">
+    Exports from QuickBooks, Xero, etc.
+  </Card>
+  <Card title="Custom Formats" icon="file-csv">
+    Custom CSV files with proper formatting
+  </Card>
+</CardGroup>
+
+## Accessing CSV Import
+
+### From Dashboard
+
+1. **Navigate to Dashboard**: Click "Dashboard" in the sidebar
+2. **Click "Upload CSV"**: Use the quick action button
+3. **Select File**: Choose your CSV file
+4. **Configure Import**: Map fields and set options
+
+### From Bank Transactions
+
+1. **Go to Bank Transactions**: Click "Bank Transactions" in the sidebar
+2. **Click "Upload CSV"**: Use the upload button
+3. **Follow Import Wizard**: Complete the import process
+
+### From All Transactions
+
+1. **Navigate to All Transactions**: Click "All TXns" in the sidebar
+2. **Click "Import Data"**: Use the import option
+3. **Select CSV Import**: Choose CSV as import type
+
+## Import Process
+
+<Steps>
+  <Step title="Prepare Your File">
+    **File Requirements:**
+    - Format: CSV (Comma Separated Values)
+    - Encoding: UTF-8 recommended
+    - Size: Up to 10MB per file
+    - Columns: Date, Description, Amount (minimum)
+    
+    **Common Column Names:**
+    - Date: "Date", "Transaction Date", "Posted Date"
+    - Description: "Description", "Memo", "Payee"
+    - Amount: "Amount", "Debit", "Credit"
+    - Balance: "Balance", "Running Balance"
+  </Step>
+  
+  <Step title="Upload File">
+    1. **Click "Choose File"**: Select your CSV file
+    2. **Verify File**: Check file name and size
+    3. **Click "Upload"**: Start the upload process
+    4. **Wait for Processing**: File is uploaded and parsed
+  </Step>
+  
+  <Step title="Map Fields">
+    1. **Review Columns**: See detected column headers
+    2. **Map Fields**: Match CSV columns to AI2Fin fields:
+       - **Date**: Transaction date
+       - **Description**: Transaction description
+       - **Amount**: Transaction amount
+       - **Balance**: Account balance
+       - **Reference**: Transaction reference number
+    3. **Set Options**: Configure import settings
+    4. **Preview Data**: Review first few rows
+  </Step>
+  
+  <Step title="Configure Settings">
+    **Import Options:**
+    - **Date Format**: Specify date format (DD/MM/YYYY, MM/DD/YYYY, etc.)
+    - **Currency**: Set currency for transactions
+    - **Account**: Assign to specific account
+    - **Skip Duplicates**: Avoid importing duplicate transactions
+    - **Auto-Categorize**: Use AI to categorize transactions
+  </Step>
+  
+  <Step title="Complete Import">
+    1. **Review Preview**: Check imported data
+    2. **Confirm Import**: Click "Import Transactions"
+    3. **Monitor Progress**: Watch import status
+    4. **Review Results**: Check imported transactions
+  </Step>
+</Steps>
+
+## Field Mapping
+
+### Required Fields
+
+<AccordionGroup>
+  <Accordion title="Date Field">
+    **Required**: Transaction date
+    **Formats Supported:**
+    - DD/MM/YYYY
+    - MM/DD/YYYY
+    - YYYY-MM-DD
+    - DD-MM-YYYY
+    
+    **Tips:**
+    - Use consistent date format
+    - Avoid ambiguous dates
+    - Include time if available
+  </Accordion>
+  
+  <Accordion title="Description Field">
+    **Required**: Transaction description
+    **Common Names:**
+    - Description
+    - Memo
+    - Payee
+    - Transaction Details
+    
+    **Tips:**
+    - Include merchant names
+    - Preserve reference numbers
+    - Keep descriptions concise
+  </Accordion>
+  
+  <Accordion title="Amount Field">
+    **Required**: Transaction amount
+    **Formats Supported:**
+    - Positive/negative amounts
+    - Separate debit/credit columns
+    - Currency symbols
+    
+    **Tips:**
+    - Use consistent decimal places
+    - Include currency if mixed
+    - Handle negative amounts properly
+  </Accordion>
+</AccordionGroup>
+
+### Optional Fields
+
+<CardGroup cols={2}>
+  <Card title="Balance" icon="scale">
+    Account balance after transaction
+  </Card>
+  <Card title="Reference" icon="hashtag">
+    Transaction reference number
+  </Card>
+  <Card title="Category" icon="tag">
+    Pre-assigned category
+  </Card>
+  <Card title="Merchant" icon="store">
+    Merchant or vendor name
+  </Card>
+</CardGroup>
+
+## Import Settings
+
+### Date Configuration
+
+<Steps>
+  <Step title="Detect Date Format">
+    AI2Fin automatically detects common date formats
+  </Step>
+  
+  <Step title="Manual Override">
+    If auto-detection fails:
+    1. Select correct date format
+    2. Specify custom format if needed
+    3. Test with preview data
+  </Step>
+</Steps>
+
+### Currency Settings
+
+<AccordionGroup>
+  <Accordion title="Single Currency">
+    **For files with one currency:**
+    - Select currency from dropdown
+    - All transactions use this currency
+    - No currency conversion needed
+  </Accordion>
+  
+  <Accordion title="Multi-Currency">
+    **For files with multiple currencies:**
+    - Map currency column
+    - Set base currency
+    - Enable currency conversion
+  </Accordion>
+</AccordionGroup>
+
+### Duplicate Handling
+
+<Warning>
+Duplicate transactions can cause data inconsistencies and reporting errors.
+</Warning>
+
+**Duplicate Detection Methods:**
+- **Exact Match**: Same date, amount, and description
+- **Fuzzy Match**: Similar transactions within tolerance
+- **Reference Match**: Same reference number
+- **Manual Review**: Flag potential duplicates for review
+
+## Post-Import Processing
+
+### Automatic Processing
+
+After import, AI2Fin automatically:
+
+<CardGroup cols={2}>
+  <Card title="AI Categorization" icon="brain">
+    Categorizes transactions using AI
+  </Card>
+  <Card title="Pattern Detection" icon="repeat">
+    Identifies recurring patterns
+  </Card>
+  <Card title="Tax Analysis" icon="calculator">
+    Analyzes tax deductibility
+  </Card>
+  <Card title="Duplicate Check" icon="copy">
+    Checks for duplicate transactions
+  </Card>
+</CardGroup>
+
+### Manual Review
+
+<Steps>
+  <Step title="Review Imported Data">
+    1. **Check Transaction Count**: Verify expected number imported
+    2. **Review Categories**: Check AI categorization results
+    3. **Verify Amounts**: Ensure amounts are correct
+    4. **Check Dates**: Confirm dates are properly formatted
+  </Step>
+  
+  <Step title="Make Corrections">
+    1. **Edit Transactions**: Fix any errors
+    2. **Recategorize**: Adjust categories as needed
+    3. **Merge Duplicates**: Handle any duplicates
+    4. **Add Missing Data**: Fill in any gaps
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Import Fails">
+    **Common Causes:**
+    - File format not supported
+    - File too large
+    - Network connectivity issues
+    - Server temporarily unavailable
+    
+    **Solutions:**
+    - Check file format and size
+    - Try uploading again
+    - Contact support if persistent
+  </Accordion>
+  
+  <Accordion title="Incorrect Field Mapping">
+    **Issues:**
+    - Wrong date format
+    - Amounts not recognized
+    - Description truncated
+    
+    **Solutions:**
+    - Re-map fields correctly
+    - Check data format
+    - Preview before importing
+  </Accordion>
+  
+  <Accordion title="Missing Transactions">
+    **Possible Causes:**
+    - Date range filters
+    - Duplicate detection
+    - Data validation errors
+    
+    **Solutions:**
+    - Check import settings
+    - Review duplicate handling
+    - Verify data quality
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+### File Preparation
+
+<Info>
+Well-prepared CSV files ensure smooth imports and accurate data processing.
+</Info>
+
+**Preparation Tips:**
+- **Clean Data**: Remove extra spaces and special characters
+- **Consistent Format**: Use same date and amount formats
+- **Complete Information**: Include all relevant transaction details
+- **Test Import**: Try with small sample first
+
+### Regular Imports
+
+<CardGroup cols={2}>
+  <Card title="Frequency" icon="calendar">
+    Import data weekly or monthly
+  </Card>
+  <Card title="Consistency" icon="repeat">
+    Use same format and settings
+  </Card>
+</CardGroup>
+
+### Data Quality
+
+- **Verify Accuracy**: Check imported data against source
+- **Handle Errors**: Correct any import issues promptly
+- **Maintain History**: Keep backup of original files
+- **Update Regularly**: Import new data consistently
+
+## API Integration
+
+For developers, CSV import is available via API:
+
+```javascript
+// Upload CSV file
+const formData = new FormData();
+formData.append('file', csvFile);
+formData.append('accountId', 'acc_123');
+formData.append('currency', 'AUD');
+
+const response = await fetch('/api/import/csv', {
+  method: 'POST',
+  headers: { 'Authorization': 'Bearer ' + token },
+  body: formData
+});
+
+const result = await response.json();
+// Returns: { importId: 'imp_123', status: 'processing' }
+```
+
+## Coming Soon
+
+<CardGroup cols={2}>
+  <Card title="Bank API Integration" icon="university">
+    Direct bank account connections
+  </Card>
+  <Card title="Advanced Parsing" icon="cogs">
+    Better handling of complex formats
+  </Card>
+</CardGroup>
+
+---
+
+**Ready to import your data?** Start with the [Quick Start Guide](/quick-start) or explore [Bank Connectors](/data-sources/bank-connectors) for automated imports.
+
+*Built with ❤️ by embracingearth.space*

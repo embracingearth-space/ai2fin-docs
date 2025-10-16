@@ -1,0 +1,44 @@
+{
+  "name": "ai2fin-docs",
+  "version": "1.0.0",
+  "description": "AI2Fin Documentation - AI-powered financial management platform guides and tutorials",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mintlify dev",
+    "build": "mintlify build",
+    "preview": "mintlify preview",
+    "deploy": "mintlify deploy",
+    "start": "mintlify dev",
+    "lint": "mintlify lint",
+    "validate": "mintlify validate"
+  },
+  "keywords": [
+    "ai2fin",
+    "documentation",
+    "financial-management",
+    "ai",
+    "expense-tracking",
+    "tax-optimization",
+    "mintlify"
+  ],
+  "author": "embracingearth.space",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai2fin/ai2fin-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ai2fin/ai2fin-docs/issues"
+  },
+  "homepage": "https://ai2fin.com/docs",
+  "devDependencies": {
+    "@mintlify/cli": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "mintlify": {
+    "version": "3.0.0"
+  }
+}

@@ -1,0 +1,448 @@
+# API Reference
+
+Complete API reference for AI2Fin's REST API endpoints, authentication, and integration capabilities.
+
+## Overview
+
+AI2Fin provides a comprehensive REST API for integrating with external systems, building custom applications, and automating financial management workflows.
+
+<CardGroup cols={2}>
+  <Card title="REST API" icon="code">
+    RESTful API endpoints
+  </Card>
+  <Card title="Authentication" icon="key">
+    Secure API authentication
+  </Card>
+  <Card title="Rate Limiting" icon="clock">
+    Fair usage policies
+  </Card>
+  <Card title="Webhooks" icon="webhook">
+    Real-time event notifications
+  </Card>
+</CardGroup>
+
+## Base URL
+
+```
+Production: https://api.ai2fin.com/v1
+Sandbox: https://api-sandbox.ai2fin.com/v1
+```
+
+## Authentication
+
+### API Keys
+
+<Info>
+All API requests require authentication using API keys.
+</Info>
+
+**Header Format:**
+```http
+Authorization: Bearer YOUR_API_KEY
+```
+
+**Getting API Keys:**
+1. Log in to AI2Fin dashboard
+2. Navigate to Settings → API Keys
+3. Generate new API key
+4. Copy and store securely
+
+### Authentication Example
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.ai2fin.com/v1/transactions
+```
+
+## Rate Limiting
+
+### Limits
+
+- **Free Tier**: 1,000 requests/hour
+- **Pro Tier**: 10,000 requests/hour
+- **Enterprise**: 100,000 requests/hour
+
+### Headers
+
+```http
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 999
+X-RateLimit-Reset: 1640995200
+```
+
+## Core Endpoints
+
+### Transactions
+
+<AccordionGroup>
+  <Accordion title="List Transactions">
+    **GET** `/transactions`
+    
+    **Parameters:**
+    - `page`: Page number (default: 1)
+    - `limit`: Items per page (default: 50, max: 100)
+    - `start_date`: Start date filter
+    - `end_date`: End date filter
+    - `category`: Category filter
+    - `type`: Transaction type filter
+    
+    **Response:**
+    ```json
+    {
+      "data": [
+        {
+          "id": "txn_123",
+          "date": "2024-01-15",
+          "description": "Office supplies",
+          "amount": -150.00,
+          "category": "Office Expenses",
+          "tax_deductible": true,
+          "business_use_percentage": 100
+        }
+      ],
+      "pagination": {
+        "page": 1,
+        "limit": 50,
+        "total": 1250,
+        "pages": 25
+      }
+    }
+    ```
+  </Accordion>
+  
+  <Accordion title="Get Transaction">
+    **GET** `/transactions/{id}`
+    
+    **Response:**
+    ```json
+    {
+      "id": "txn_123",
+      "date": "2024-01-15",
+      "description": "Office supplies",
+      "amount": -150.00,
+      "category": "Office Expenses",
+      "tax_deductible": true,
+      "business_use_percentage": 100,
+      "merchant": "Office Depot",
+      "reference": "REF123456",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    }
+    ```
+  </Accordion>
+  
+  <Accordion title="Create Transaction">
+    **POST** `/transactions`
+    
+    **Request Body:**
+    ```json
+    {
+      "date": "2024-01-15",
+      "description": "Office supplies",
+      "amount": -150.00,
+      "category": "Office Expenses",
+      "tax_deductible": true,
+      "business_use_percentage": 100,
+      "merchant": "Office Depot"
+    }
+    ```
+  </Accordion>
+  
+  <Accordion title="Update Transaction">
+    **PUT** `/transactions/{id}`
+    
+    **Request Body:**
+    ```json
+    {
+      "description": "Updated description",
+      "category": "Updated Category",
+      "tax_deductible": false
+    }
+    ```
+  </Accordion>
+  
+  <Accordion title="Delete Transaction">
+    **DELETE** `/transactions/{id}`
+    
+    **Response:**
+    ```json
+    {
+      "success": true,
+      "message": "Transaction deleted successfully"
+    }
+    ```
+  </Accordion>
+</AccordionGroup>
+
+### Categories
+
+<CardGroup cols={2}>
+  <Card title="List Categories" icon="list">
+    GET /categories
+  </Card>
+  <Card title="Create Category" icon="plus">
+    POST /categories
+  </Card>
+  <Card title="Update Category" icon="edit">
+    PUT /categories/{id}
+  </Card>
+  <Card title="Delete Category" icon="trash">
+    DELETE /categories/{id}
+  </Card>
+</CardGroup>
+
+### AI Classification
+
+<AccordionGroup>
+  <Accordion title="Classify Transaction">
+    **POST** `/ai/classify`
+    
+    **Request Body:**
+    ```json
+    {
+      "description": "Office supplies purchase",
+      "amount": -150.00,
+      "merchant": "Office Depot"
+    }
+    ```
+    
+    **Response:**
+    ```json
+    {
+      "category": "Office Expenses",
+      "confidence": 0.95,
+      "tax_deductible": true,
+      "business_use_percentage": 100,
+      "reasoning": "Office supplies are typically business expenses"
+    }
+    ```
+  </Accordion>
+  
+  <Accordion title="Bulk Classification">
+    **POST** `/ai/bulk-classify`
+    
+    **Request Body:**
+    ```json
+    {
+      "transactions": [
+        {
+          "id": "txn_123",
+          "description": "Office supplies",
+          "amount": -150.00
+        },
+        {
+          "id": "txn_124",
+          "description": "Client lunch",
+          "amount": -85.00
+        }
+      ]
+    }
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Error Handling
+
+### Error Response Format
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid request parameters",
+    "details": [
+      {
+        "field": "amount",
+        "message": "Amount must be a valid number"
+      }
+    ]
+  }
+}
+```
+
+### Common Error Codes
+
+<AccordionGroup>
+  <Accordion title="4xx Client Errors">
+    - **400 Bad Request**: Invalid request parameters
+    - **401 Unauthorized**: Invalid or missing API key
+    - **403 Forbidden**: Insufficient permissions
+    - **404 Not Found**: Resource not found
+    - **422 Unprocessable Entity**: Validation errors
+  </Accordion>
+  
+  <Accordion title="5xx Server Errors">
+    - **500 Internal Server Error**: Server error
+    - **502 Bad Gateway**: Upstream service error
+    - **503 Service Unavailable**: Service temporarily unavailable
+    - **504 Gateway Timeout**: Request timeout
+  </Accordion>
+</AccordionGroup>
+
+## Webhooks
+
+### Webhook Events
+
+<CardGroup cols={2}>
+  <Card title="Transaction Created" icon="plus">
+    transaction.created
+  </Card>
+  <Card title="Transaction Updated" icon="edit">
+    transaction.updated
+  </Card>
+  <Card title="Transaction Deleted" icon="trash">
+    transaction.deleted
+  </Card>
+  <Card title="Category Created" icon="tag">
+    category.created
+  </Card>
+</CardGroup>
+
+### Webhook Payload
+
+```json
+{
+  "event": "transaction.created",
+  "data": {
+    "id": "txn_123",
+    "date": "2024-01-15",
+    "description": "Office supplies",
+    "amount": -150.00,
+    "category": "Office Expenses"
+  },
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+```
+
+### Webhook Setup
+
+<Steps>
+  <Step title="Create Webhook Endpoint">
+    1. Create HTTP endpoint in your application
+    2. Ensure endpoint accepts POST requests
+    3. Implement webhook signature verification
+  </Step>
+  
+  <Step title="Register Webhook">
+    1. Go to AI2Fin dashboard
+    2. Navigate to Settings → Webhooks
+    3. Add webhook URL
+    4. Select events to subscribe to
+  </Step>
+  
+  <Step title="Test Webhook">
+    1. Send test webhook
+    2. Verify payload format
+    3. Check signature validation
+    4. Confirm event handling
+  </Step>
+</Steps>
+
+## SDKs and Libraries
+
+### Official SDKs
+
+<CardGroup cols={2}>
+  <Card title="JavaScript/Node.js" icon="js">
+    npm install @ai2fin/sdk
+  </Card>
+  <Card title="Python" icon="python">
+    pip install ai2fin-sdk
+  </Card>
+  <Card title="PHP" icon="php">
+    composer require ai2fin/sdk
+  </Card>
+  <Card title="Go" icon="go">
+    go get github.com/ai2fin/sdk-go
+  </Card>
+</CardGroup>
+
+### JavaScript SDK Example
+
+```javascript
+import { AI2Fin } from '@ai2fin/sdk';
+
+const client = new AI2Fin({
+  apiKey: 'your_api_key',
+  environment: 'production' // or 'sandbox'
+});
+
+// List transactions
+const transactions = await client.transactions.list({
+  startDate: '2024-01-01',
+  endDate: '2024-01-31',
+  limit: 100
+});
+
+// Create transaction
+const transaction = await client.transactions.create({
+  date: '2024-01-15',
+  description: 'Office supplies',
+  amount: -150.00,
+  category: 'Office Expenses'
+});
+
+// AI classification
+const classification = await client.ai.classify({
+  description: 'Office supplies purchase',
+  amount: -150.00
+});
+```
+
+## Testing
+
+### Sandbox Environment
+
+<Info>
+Use the sandbox environment for testing and development.
+</Info>
+
+**Sandbox URL:** `https://api-sandbox.ai2fin.com/v1`
+
+**Features:**
+- Test data only
+- No real transactions
+- Full API functionality
+- Rate limit testing
+
+### Postman Collection
+
+Download our Postman collection for easy API testing:
+
+```bash
+# Import collection
+curl -o ai2fin-api.postman_collection.json \
+     https://api.ai2fin.com/docs/postman-collection
+```
+
+## Best Practices
+
+### API Usage
+
+<CardGroup cols={2}>
+  <Card title="Rate Limiting" icon="clock">
+    Respect rate limits
+  </Card>
+  <Card title="Error Handling" icon="exclamation">
+    Implement proper error handling
+  </Card>
+  <Card title="Pagination" icon="list">
+    Use pagination for large datasets
+  </Card>
+  <Card title="Caching" icon="database">
+    Cache responses when appropriate
+  </Card>
+</CardGroup>
+
+### Security
+
+- **API Key Security**: Store API keys securely
+- **HTTPS Only**: Always use HTTPS
+- **Input Validation**: Validate all inputs
+- **Error Handling**: Don't expose sensitive data in errors
+
+---
+
+**Ready to integrate?** Check out our [SDK documentation](https://github.com/ai2fin/sdk) or [contact support](mailto:support@ai2fin.com) for assistance.
+
+*Built with ❤️ by embracingearth.space*

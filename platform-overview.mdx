@@ -1,0 +1,500 @@
+# Platform Overview
+
+AI2Fin is a comprehensive, enterprise-grade financial management platform built with modern architecture and AI-first principles. This overview explains the complete ecosystem and how all components work together.
+
+## Architecture Overview
+
+AI2Fin follows a microservices architecture designed for scalability, reliability, and performance:
+
+<CardGroup cols={2}>
+  <Card title="Core App" icon="server">
+    Main application server and API gateway
+  </Card>
+  <Card title="AI Modules" icon="brain">
+    AI-powered financial intelligence services
+  </Card>
+  <Card title="Connectors" icon="plug">
+    External service integrations
+  </Card>
+  <Card title="Analytics" icon="chart-bar">
+    Advanced reporting and insights
+  </Card>
+</CardGroup>
+
+## Core Components
+
+### 1. Core Application (`ai2-core-app`)
+
+The foundation of the platform providing:
+
+<AccordionGroup>
+  <Accordion title="Transaction Management">
+    - Create, read, update, delete transactions
+    - Bulk operations and batch processing
+    - Advanced filtering and search
+    - Real-time data synchronization
+  </Accordion>
+  
+  <Accordion title="Category Management">
+    - Custom category creation and management
+    - Hierarchical category structures
+    - Color coding and organization
+    - Tax deductibility settings
+  </Accordion>
+  
+  <Accordion title="User Management">
+    - Authentication and authorization
+    - User preferences and settings
+    - Multi-tenant data isolation
+    - Role-based access control
+  </Accordion>
+  
+  <Accordion title="Dashboard & Analytics">
+    - Real-time financial overview
+    - Interactive charts and graphs
+    - Customizable widgets
+    - Performance metrics
+  </Accordion>
+</AccordionGroup>
+
+### 2. AI Modules (`ai2-ai-modules`)
+
+Advanced AI services for financial intelligence:
+
+<CardGroup cols={2}>
+  <Card title="Smart Categorization" icon="brain">
+    Machine learning-powered transaction categorization
+  </Card>
+  <Card title="Pattern Analysis" icon="chart-line">
+    Recurring pattern detection and analysis
+  </Card>
+  <Card title="Tax Optimization" icon="calculator">
+    Automated tax deduction identification
+  </Card>
+  <Card title="Predictive Analytics" icon="crystal-ball">
+    Future expense forecasting and insights
+  </Card>
+</CardGroup>
+
+### 3. Connectors (`ai2-connectors`)
+
+External service integrations:
+
+<AccordionGroup>
+  <Accordion title="Bank APIs">
+    - Real-time bank account connections
+    - Transaction synchronization
+    - Account balance monitoring
+    - Multi-bank support
+  </Accordion>
+  
+  <Accordion title="Email Processing">
+    - Receipt and invoice extraction
+    - Automated email parsing
+    - Document processing
+    - OCR capabilities
+  </Accordion>
+  
+  <Accordion title="Accounting Software">
+    - QuickBooks integration
+    - Xero synchronization
+    - MYOB compatibility
+    - Export capabilities
+  </Accordion>
+</AccordionGroup>
+
+### 4. Analytics Service (`ai2-analytics`)
+
+Advanced reporting and insights:
+
+<CardGroup cols={2}>
+  <Card title="Financial Reports" icon="file-chart">
+    Comprehensive financial reporting
+  </Card>
+  <Card title="Trend Analysis" icon="trending-up">
+    Spending trends and patterns
+  </Card>
+  <Card title="Tax Reports" icon="receipt">
+    ATO-compliant tax reporting
+  </Card>
+  <Card title="Custom Dashboards" icon="chart-pie">
+    Personalized analytics dashboards
+  </Card>
+</CardGroup>
+
+## Data Flow Architecture
+
+<Steps>
+  <Step title="Data Input">
+    **Sources:**
+    - CSV file uploads
+    - Bank API connections
+    - Email processing
+    - Manual entry
+    
+    **Processing:**
+    - Data validation
+    - Format standardization
+    - Duplicate detection
+    - Quality checks
+  </Step>
+  
+  <Step title="AI Processing">
+    **Analysis:**
+    - Transaction categorization
+    - Pattern recognition
+    - Tax analysis
+    - Anomaly detection
+    
+    **Enhancement:**
+    - Data enrichment
+    - Confidence scoring
+    - Learning from corrections
+    - Continuous improvement
+  </Step>
+  
+  <Step title="Storage & Management">
+    **Database:**
+    - Transaction storage
+    - Category management
+    - User preferences
+    - Audit trails
+    
+    **Security:**
+    - Data encryption
+    - Access controls
+    - Compliance standards
+    - Backup systems
+  </Step>
+  
+  <Step title="Output & Reporting">
+    **Reports:**
+    - Financial summaries
+    - Tax reports
+    - Trend analysis
+    - Custom exports
+    
+    **APIs:**
+    - RESTful endpoints
+    - Real-time updates
+    - Third-party integrations
+    - Mobile access
+  </Step>
+</Steps>
+
+## Feature Categories
+
+### Input Management
+
+<CardGroup cols={2}>
+  <Card title="CSV Imports" icon="file-csv" href="/data-sources/csv-imports">
+    Upload and process bank statements
+  </Card>
+  <Card title="Bank Connectors" icon="university" href="/data-sources/bank-connectors">
+    Real-time bank account connections
+  </Card>
+  <Card title="Email Processing" icon="envelope" href="/data-sources/email-processing">
+    Process receipts and bills from emails
+  </Card>
+  <Card title="Manual Entry" icon="edit">
+    Create transactions manually
+  </Card>
+</CardGroup>
+
+### Personalization
+
+<CardGroup cols={2}>
+  <Card title="Categories" icon="tag" href="/features/categories">
+    Organize transaction categories
+  </Card>
+  <Card title="Custom Rules" icon="gear" href="/features/custom-rules">
+    Create automated processing rules
+  </Card>
+  <Card title="Allocations" icon="pie-chart" href="/features/allocations">
+    Set budget allocations and tracking
+  </Card>
+  <Card title="User Preferences" icon="user-cog">
+    Customize platform settings
+  </Card>
+</CardGroup>
+
+### Analysis & Intelligence
+
+<CardGroup cols={2}>
+  <Card title="Smart Categorization" icon="brain" href="/features/smart-categorisation">
+    AI-powered transaction categorization
+  </Card>
+  <Card title="Pattern Analysis" icon="chart-line" href="/features/pattern-analysis">
+    Recurring pattern detection
+  </Card>
+  <Card title="Tax Analysis" icon="calculator" href="/features/tax-analysis">
+    Automated tax optimization
+  </Card>
+  <Card title="AI Assistant" icon="robot">
+    AI-powered financial insights
+  </Card>
+</CardGroup>
+
+### Management & Reporting
+
+<CardGroup cols={2}>
+  <Card title="All Transactions" icon="list">
+    Comprehensive transaction management
+  </Card>
+  <Card title="Recurring Patterns" icon="repeat" href="/features/recurring-patterns">
+    Manage recurring bills and payments
+  </Card>
+  <Card title="Travel Expenses" icon="car" href="/advanced/travel-expenses">
+    Track vehicle trips and mileage
+  </Card>
+  <Card title="Tax Export" icon="download" href="/advanced/exports">
+    ATO-compliant reporting
+  </Card>
+</CardGroup>
+
+## Technology Stack
+
+### Frontend
+
+<AccordionGroup>
+  <Accordion title="React & TypeScript">
+    Modern, type-safe frontend development
+  </Accordion>
+  
+  <Accordion title="Material-UI">
+    Professional, accessible component library
+  </Accordion>
+  
+  <Accordion title="Framer Motion">
+    Smooth animations and transitions
+  </Accordion>
+  
+  <Accordion title="Progressive Web App">
+    Mobile-first, offline-capable design
+  </Accordion>
+</AccordionGroup>
+
+### Backend
+
+<CardGroup cols={2}>
+  <Card title="Node.js" icon="node-js">
+    High-performance JavaScript runtime
+  </Card>
+  <Card title="Express.js" icon="server">
+    Minimal web framework
+  </Card>
+  <Card title="TypeScript" icon="code">
+    Type-safe backend development
+  </Card>
+  <Card title="Microservices" icon="cubes">
+    Scalable service architecture
+  </Card>
+</CardGroup>
+
+### Database & Storage
+
+<AccordionGroup>
+  <Accordion title="PostgreSQL">
+    Robust relational database
+  </Accordion>
+  
+  <Accordion title="Redis">
+    High-performance caching
+  </Accordion>
+  
+  <Accordion title="File Storage">
+    Secure file upload and storage
+  </Accordion>
+  
+  <Accordion title="Backup Systems">
+    Automated data backup and recovery
+  </Accordion>
+</AccordionGroup>
+
+### AI & Machine Learning
+
+<CardGroup cols={2}>
+  <Card title="OpenAI GPT" icon="brain">
+    Advanced language processing
+  </Card>
+  <Card title="Custom Models" icon="cogs">
+    Specialized financial AI models
+  </Card>
+  <Card title="Pattern Recognition" icon="chart-line">
+    Advanced pattern detection algorithms
+  </Card>
+  <Card title="Learning Systems" icon="graduation-cap">
+    Continuous improvement and adaptation
+  </Card>
+</CardGroup>
+
+## Security & Compliance
+
+### Data Protection
+
+<Warning>
+AI2Fin implements enterprise-grade security measures to protect your financial data.
+</Warning>
+
+<AccordionGroup>
+  <Accordion title="Encryption">
+    - End-to-end encryption
+    - TLS/SSL for data transmission
+    - Encrypted data storage
+    - Secure key management
+  </Accordion>
+  
+  <Accordion title="Access Control">
+    - Multi-factor authentication
+    - Role-based permissions
+    - Session management
+    - Audit logging
+  </Accordion>
+  
+  <Accordion title="Compliance">
+    - GDPR compliance
+    - SOC 2 Type II
+    - Financial data standards
+    - Regular security audits
+  </Accordion>
+</AccordionGroup>
+
+### Privacy Features
+
+<CardGroup cols={2}>
+  <Card title="Data Isolation" icon="shield">
+    User data completely isolated
+  </Card>
+  <Card title="Privacy Controls" icon="eye-slash">
+    Granular privacy settings
+  </Card>
+  <Card title="Data Export" icon="download">
+    Complete data portability
+  </Card>
+  <Card title="Data Deletion" icon="trash">
+    Secure data deletion
+  </Card>
+</CardGroup>
+
+## Scalability & Performance
+
+### Enterprise Architecture
+
+<Info>
+AI2Fin is designed to handle enterprise-scale workloads with millions of transactions.
+</Info>
+
+<AccordionGroup>
+  <Accordion title="Horizontal Scaling">
+    - Microservices architecture
+    - Load balancing
+    - Auto-scaling capabilities
+    - Container orchestration
+  </Accordion>
+  
+  <Accordion title="Performance Optimization">
+    - Database indexing
+    - Query optimization
+    - Caching strategies
+    - CDN integration
+  </Accordion>
+  
+  <Accordion title="High Availability">
+    - Redundant systems
+    - Failover mechanisms
+    - Health monitoring
+    - Disaster recovery
+  </Accordion>
+</AccordionGroup>
+
+## Integration Capabilities
+
+### API Ecosystem
+
+<CardGroup cols={2}>
+  <Card title="REST APIs" icon="code">
+    Comprehensive REST API
+  </Card>
+  <Card title="Webhooks" icon="webhook">
+    Real-time event notifications
+  </Card>
+  <Card title="SDKs" icon="box">
+    Developer SDKs and libraries
+  </Card>
+  <Card title="Third-party" icon="plug">
+    Integration marketplace
+  </Card>
+</CardGroup>
+
+### Supported Integrations
+
+<AccordionGroup>
+  <Accordion title="Banking">
+    - Major Australian banks
+    - International banks
+    - Credit card providers
+    - Digital wallets
+  </Accordion>
+  
+  <Accordion title="Accounting">
+    - QuickBooks Online
+    - Xero
+    - MYOB
+    - Sage
+  </Accordion>
+  
+  <Accordion title="Business Tools">
+    - Slack notifications
+    - Email integrations
+    - Calendar sync
+    - Document management
+  </Accordion>
+</AccordionGroup>
+
+## Deployment Options
+
+### Cloud Hosting
+
+<CardGroup cols={2}>
+  <Card title="AWS" icon="aws">
+    Amazon Web Services
+  </Card>
+  <Card title="Azure" icon="microsoft">
+    Microsoft Azure
+  </Card>
+  <Card title="Google Cloud" icon="google">
+    Google Cloud Platform
+  </Card>
+  <Card title="Cloudflare" icon="cloudflare">
+    Cloudflare Pages
+  </Card>
+</CardGroup>
+
+### On-Premise
+
+<Info>
+Enterprise customers can deploy AI2Fin on their own infrastructure for maximum control and compliance.
+</Info>
+
+## Future Roadmap
+
+<CardGroup cols={2}>
+  <Card title="Advanced AI" icon="brain">
+    Enhanced machine learning capabilities
+  </Card>
+  <Card title="Mobile Apps" icon="mobile">
+    Native iOS and Android applications
+  </Card>
+  <Card title="Blockchain" icon="link">
+    Cryptocurrency transaction support
+  </Card>
+  <Card title="Global Expansion" icon="globe">
+    Multi-country tax and compliance
+  </Card>
+</CardGroup>
+
+---
+
+**Ready to explore specific features?** Check out our [feature guides](/features) or start with the [Quick Start Guide](/quick-start).
+
+*Built with ❤️ by embracingearth.space*

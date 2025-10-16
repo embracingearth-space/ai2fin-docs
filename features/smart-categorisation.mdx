@@ -1,0 +1,242 @@
+# Smart Categorisation
+
+AI2Fin's Smart Categorisation feature uses advanced machine learning algorithms to automatically categorize your transactions, saving you hours of manual work while improving accuracy.
+
+## How It Works
+
+The Smart Categorisation system analyzes transaction patterns, descriptions, amounts, and merchant information to intelligently assign categories. It learns from your preferences and improves over time.
+
+<CardGroup cols={2}>
+  <Card title="Pattern Recognition" icon="chart-line">
+    Identifies spending patterns and merchant relationships
+  </Card>
+  <Card title="Context Analysis" icon="brain">
+    Analyzes transaction context and business rules
+  </Card>
+  <Card title="Learning Algorithm" icon="graduation-cap">
+    Continuously improves from your corrections
+  </Card>
+  <Card title="Confidence Scoring" icon="target">
+    Provides confidence levels for each categorization
+  </Card>
+</CardGroup>
+
+## Accessing Smart Categorisation
+
+### From All Transactions Page
+
+1. **Navigate to All Transactions**: Click "All TXns" in the sidebar
+2. **Select Transactions**: Choose uncategorized transactions
+3. **Click AI Categorize**: Use the AI categorization button
+4. **Review Suggestions**: Check AI recommendations
+5. **Accept or Modify**: Confirm or adjust categories
+
+### From Individual Transaction
+
+1. **Open Transaction**: Click on any transaction
+2. **AI Suggest**: Click the AI suggestion button
+3. **Review Category**: Check the suggested category
+4. **Apply Changes**: Accept or modify the suggestion
+
+## AI Categorization Process
+
+<Steps>
+  <Step title="Transaction Analysis">
+    The AI analyzes multiple factors:
+    - **Description**: Keywords and patterns in transaction text
+    - **Amount**: Spending ranges and typical category amounts
+    - **Merchant**: Known merchant-to-category mappings
+    - **Frequency**: Recurring transaction patterns
+    - **Context**: Related transactions and business rules
+  </Step>
+  
+  <Step title="Pattern Matching">
+    Compares against:
+    - Your historical categorization patterns
+    - Similar transactions from other users
+    - Business expense categories
+    - Tax deduction rules
+  </Step>
+  
+  <Step title="Confidence Calculation">
+    Provides confidence scores:
+    - **High (90-100%)**: Very confident suggestion
+    - **Medium (70-89%)**: Likely correct, review recommended
+    - **Low (50-69%)**: Uncertain, manual review needed
+  </Step>
+</Steps>
+
+## Configuration Options
+
+### AI Settings
+
+<AccordionGroup>
+  <Accordion title="Confidence Threshold">
+    Set minimum confidence level for automatic categorization:
+    - **High**: Only auto-categorize 90%+ confidence
+    - **Medium**: Auto-categorize 70%+ confidence
+    - **Low**: Auto-categorize 50%+ confidence
+  </Accordion>
+  
+  <Accordion title="Learning Mode">
+    Enable continuous learning from your corrections:
+    - **On**: AI learns from your changes
+    - **Off**: AI suggestions remain static
+  </Accordion>
+  
+  <Accordion title="Business Context">
+    Provide business information for better accuracy:
+    - Industry type
+    - Common expense categories
+    - Tax deduction preferences
+  </Accordion>
+</AccordionGroup>
+
+## Bulk Categorization
+
+Process multiple transactions at once:
+
+<Steps>
+  <Step title="Select Multiple Transactions">
+    1. Go to **All Transactions**
+    2. Use filters to find uncategorized transactions
+    3. Select multiple transactions using checkboxes
+    4. Click **"Bulk AI Categorize"**
+  </Step>
+  
+  <Step title="Review Bulk Results">
+    1. Review categorization results
+    2. Accept high-confidence suggestions
+    3. Manually review medium/low confidence
+    4. Apply changes to selected transactions
+  </Step>
+</Steps>
+
+## Intelligent Categorization Modal
+
+The Intelligent Categorization Modal provides advanced categorization options:
+
+### Features
+
+- **Multi-Agent Analysis**: Different AI agents analyze different aspects
+- **Confidence Visualization**: Visual confidence indicators
+- **Alternative Suggestions**: Multiple category options
+- **Learning Feedback**: Improve future suggestions
+
+### Usage
+
+1. **Open Modal**: Click "Intelligent Categorize" on any transaction
+2. **Review Analysis**: See detailed AI analysis
+3. **Check Alternatives**: View alternative category suggestions
+4. **Apply Changes**: Select the best category
+5. **Provide Feedback**: Help improve future suggestions
+
+## Custom Rules Integration
+
+Smart Categorisation works seamlessly with Custom Rules:
+
+<CardGroup cols={2}>
+  <Card title="Rule Priority" icon="sort">
+    Custom rules take precedence over AI suggestions
+  </Card>
+  <Card title="AI Enhancement" icon="sparkles">
+    AI can suggest new rules based on patterns
+  </Card>
+</CardGroup>
+
+## Performance Optimization
+
+<Info>
+AI categorization is optimized for performance with intelligent caching and batch processing.
+</Info>
+
+### Best Practices
+
+- **Batch Processing**: Process multiple transactions together
+- **Regular Updates**: Run categorization weekly for new transactions
+- **Review Results**: Check AI suggestions before applying
+- **Provide Feedback**: Correct mistakes to improve accuracy
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="AI Not Working">
+    **Possible Causes:**
+    - OpenAI API key not configured
+    - Network connectivity issues
+    - Service temporarily unavailable
+    
+    **Solutions:**
+    - Check system status
+    - Verify API configuration
+    - Try again in a few minutes
+  </Accordion>
+  
+  <Accordion title="Poor Categorization Accuracy">
+    **Improvement Tips:**
+    - Provide more business context
+    - Correct AI mistakes promptly
+    - Use custom rules for specific patterns
+    - Review and refine categories
+  </Accordion>
+  
+  <Accordion title="Slow Performance">
+    **Optimization:**
+    - Process transactions in smaller batches
+    - Use filters to reduce transaction count
+    - Clear browser cache
+    - Check system resources
+  </Accordion>
+</AccordionGroup>
+
+## Advanced Features
+
+### Pattern Analysis Integration
+
+Smart Categorisation integrates with Pattern Analysis to identify recurring transaction patterns and suggest appropriate categories for similar transactions.
+
+### Tax Optimization
+
+The AI considers tax deductibility when suggesting categories, helping you maximize legitimate business deductions.
+
+### Multi-Currency Support
+
+AI categorization works across multiple currencies, understanding local business patterns and tax requirements.
+
+## API Integration
+
+For developers, Smart Categorisation is available via API:
+
+```javascript
+// Categorize a single transaction
+const response = await fetch('/api/ai/categorize', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    transactionId: 'txn_123',
+    description: 'Office supplies purchase',
+    amount: 150.00,
+    merchant: 'Office Depot'
+  })
+});
+
+const result = await response.json();
+// Returns: { category: 'Office Supplies', confidence: 0.95 }
+```
+
+## Coming Soon
+
+<CardGroup cols={2}>
+  <Card title="Enhanced Learning" icon="brain">
+    Improved machine learning algorithms
+  </Card>
+  <Card title="Industry Templates" icon="building">
+    Pre-configured categories for different industries
+  </Card>
+</CardGroup>
+
+---
+
+**Ready to automate your categorization?** Start with the [Quick Start Guide](/quick-start) or explore [Custom Rules](/features/custom-rules) for more control.
+
+*Built with ❤️ by embracingearth.space*

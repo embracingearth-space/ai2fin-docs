@@ -1,0 +1,317 @@
+# Pattern Analysis
+
+AI2Fin's Pattern Analysis feature uses advanced algorithms to identify recurring financial patterns, helping you understand your spending habits and optimize your financial management.
+
+## What is Pattern Analysis?
+
+Pattern Analysis automatically detects recurring transactions, spending trends, and financial behaviors in your data. It helps you identify bills, subscriptions, and regular expenses that can be automated or optimized.
+
+<CardGroup cols={2}>
+  <Card title="Recurring Detection" icon="repeat">
+    Identifies monthly, quarterly, and annual recurring transactions
+  </Card>
+  <Card title="Spending Trends" icon="chart-line">
+    Analyzes spending patterns and seasonal variations
+  </Card>
+  <Card title="Anomaly Detection" icon="exclamation-triangle">
+    Flags unusual spending patterns or potential errors
+  </Card>
+  <Card title="Predictive Insights" icon="crystal-ball">
+    Predicts future expenses based on historical patterns
+  </Card>
+</CardGroup>
+
+## Accessing Pattern Analysis
+
+### From Dashboard
+
+1. **Navigate to Dashboard**: Click "Dashboard" in the sidebar
+2. **View Recurring Patterns Card**: See active patterns summary
+3. **Click "View All Bills"**: Access detailed pattern analysis
+
+### From All Transactions
+
+1. **Go to All Transactions**: Click "All TXns" in the sidebar
+2. **Click Pattern Analysis**: Use the pattern analysis button
+3. **Review Detected Patterns**: See identified recurring transactions
+
+### From Patterns Page
+
+1. **Navigate to Patterns**: Click "Patterns (Recurring)" in the sidebar
+2. **View Pattern Analysis**: Access comprehensive pattern insights
+3. **Manage Patterns**: Create, edit, or delete recurring patterns
+
+## Pattern Detection Process
+
+<Steps>
+  <Step title="Transaction Analysis">
+    The system analyzes:
+    - **Frequency**: Monthly, quarterly, annual patterns
+    - **Amount Consistency**: Similar amounts over time
+    - **Merchant Patterns**: Recurring merchants and vendors
+    - **Date Patterns**: Regular due dates and payment cycles
+  </Step>
+  
+  <Step title="Pattern Recognition">
+    Identifies patterns using:
+    - **Machine Learning**: Advanced pattern recognition algorithms
+    - **Statistical Analysis**: Frequency and variance analysis
+    - **Temporal Analysis**: Time-based pattern detection
+    - **Amount Clustering**: Similar amount groupings
+  </Step>
+  
+  <Step title="Confidence Scoring">
+    Provides confidence levels:
+    - **High (90-100%)**: Very reliable pattern
+    - **Medium (70-89%)**: Likely pattern, review recommended
+    - **Low (50-69%)**: Uncertain pattern, manual verification needed
+  </Step>
+</Steps>
+
+## Pattern Types Detected
+
+<AccordionGroup>
+  <Accordion title="Monthly Recurring">
+    **Examples:**
+    - Rent/mortgage payments
+    - Utility bills (electricity, water, gas)
+    - Software subscriptions
+    - Insurance premiums
+    
+    **Detection Criteria:**
+    - Same merchant, similar amount
+    - Monthly frequency
+    - Consistent due dates
+  </Accordion>
+  
+  <Accordion title="Quarterly Patterns">
+    **Examples:**
+    - Quarterly tax payments
+    - Seasonal subscriptions
+    - Maintenance services
+    - Professional fees
+    
+    **Detection Criteria:**
+    - Every 3 months
+    - Similar amounts
+    - Related merchants
+  </Accordion>
+  
+  <Accordion title="Annual Patterns">
+    **Examples:**
+    - Annual insurance renewals
+    - Software licenses
+    - Professional memberships
+    - Equipment maintenance
+    
+    **Detection Criteria:**
+    - Yearly frequency
+    - Consistent amounts
+    - Same service providers
+  </Accordion>
+</AccordionGroup>
+
+## Pattern Analysis Modal
+
+The Pattern Analysis Modal provides detailed insights into your financial patterns:
+
+### Features
+
+- **Pattern Visualization**: Charts and graphs showing patterns
+- **Confidence Indicators**: Visual confidence levels
+- **Pattern Details**: Detailed breakdown of each pattern
+- **Action Suggestions**: Recommendations for optimization
+
+### Usage
+
+1. **Open Modal**: Click "Pattern Analysis" on any transaction
+2. **Review Patterns**: See detected patterns and confidence levels
+3. **Analyze Trends**: View spending trends and anomalies
+4. **Take Action**: Create bill patterns or set up automation
+
+## Creating Bill Patterns
+
+Convert detected patterns into manageable bill patterns:
+
+<Steps>
+  <Step title="Select Pattern">
+    1. Review detected patterns
+    2. Choose a reliable pattern
+    3. Click "Create Bill Pattern"
+  </Step>
+  
+  <Step title="Configure Pattern">
+    1. **Name**: Give the pattern a descriptive name
+    2. **Amount**: Set expected amount (can be range)
+    3. **Frequency**: Monthly, quarterly, or annual
+    4. **Due Date**: Set expected due date
+    5. **Category**: Assign appropriate category
+  </Step>
+  
+  <Step title="Link Transactions">
+    1. **Auto-Link**: System suggests matching transactions
+    2. **Manual Link**: Manually link additional transactions
+    3. **Verify**: Check linked transactions for accuracy
+  </Step>
+</Steps>
+
+## Pattern Management
+
+### Viewing Patterns
+
+<CardGroup cols={2}>
+  <Card title="Active Patterns" icon="play">
+    Currently active recurring patterns
+  </Card>
+  <Card title="Overdue Patterns" icon="warning">
+    Patterns with overdue payments
+  </Card>
+  <Card title="Upcoming Patterns" icon="calendar">
+    Patterns with upcoming due dates
+  </Card>
+  <Card title="Recently Paid" icon="check">
+    Recently completed pattern payments
+  </Card>
+</CardGroup>
+
+### Pattern Status
+
+- **🟢 Active**: Pattern is active and being tracked
+- **🟡 Pending**: Pattern detected but not yet confirmed
+- **🔴 Overdue**: Payment is overdue
+- **✅ Paid**: Payment has been completed
+
+## Advanced Pattern Features
+
+### Anomaly Detection
+
+The system flags unusual patterns:
+
+<Warning>
+Anomalies may indicate errors, fraud, or significant changes in spending patterns.
+</Warning>
+
+**Common Anomalies:**
+- Unusually high amounts
+- Missing expected payments
+- New merchants in established patterns
+- Changes in payment frequency
+
+### Predictive Analysis
+
+<Info>
+Predictive analysis helps forecast future expenses and cash flow needs.
+</Info>
+
+**Predictions Include:**
+- Next payment dates
+- Expected amounts
+- Seasonal variations
+- Cash flow projections
+
+## Integration with Other Features
+
+### Smart Categorization
+
+Pattern Analysis enhances Smart Categorization by:
+- Providing context for similar transactions
+- Suggesting categories based on patterns
+- Improving categorization accuracy
+
+### Custom Rules
+
+Patterns can trigger custom rules:
+- Auto-categorize recurring transactions
+- Set up automated workflows
+- Create alerts for pattern changes
+
+### Tax Analysis
+
+Pattern analysis helps with tax planning:
+- Identify deductible recurring expenses
+- Track business expense patterns
+- Optimize tax timing
+
+## Performance Optimization
+
+### Best Practices
+
+- **Regular Analysis**: Run pattern analysis weekly
+- **Review Results**: Check detected patterns for accuracy
+- **Update Patterns**: Keep patterns current and accurate
+- **Monitor Anomalies**: Investigate flagged anomalies
+
+### Performance Tips
+
+- **Filter Data**: Use date ranges to focus analysis
+- **Batch Processing**: Analyze patterns in batches
+- **Clear Cache**: Clear browser cache for better performance
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="No Patterns Detected">
+    **Possible Causes:**
+    - Insufficient transaction history
+    - Inconsistent transaction data
+    - Patterns too irregular
+    
+    **Solutions:**
+    - Import more historical data
+    - Standardize transaction descriptions
+    - Manually create patterns for irregular expenses
+  </Accordion>
+  
+  <Accordion title="Incorrect Patterns">
+    **Improvement Tips:**
+    - Review and correct pattern details
+    - Unlink incorrect transactions
+    - Adjust pattern parameters
+    - Provide feedback to improve detection
+  </Accordion>
+  
+  <Accordion title="Performance Issues">
+    **Optimization:**
+    - Use smaller date ranges
+    - Process patterns in batches
+    - Clear browser cache
+    - Check system resources
+  </Accordion>
+</AccordionGroup>
+
+## API Integration
+
+For developers, Pattern Analysis is available via API:
+
+```javascript
+// Analyze patterns for a date range
+const response = await fetch('/api/patterns/analyze', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    startDate: '2024-01-01',
+    endDate: '2024-12-31',
+    minConfidence: 0.7
+  })
+});
+
+const patterns = await response.json();
+// Returns: Array of detected patterns with confidence scores
+```
+
+## Coming Soon
+
+<CardGroup cols={2}>
+  <Card title="Advanced Analytics" icon="chart-bar">
+    Deeper insights into spending patterns
+  </Card>
+  <Card title="Predictive Modeling" icon="crystal-ball">
+    AI-powered expense forecasting
+  </Card>
+</CardGroup>
+
+---
+
+**Ready to discover your financial patterns?** Start with the [Quick Start Guide](/quick-start) or explore [Recurring Patterns](/features/recurring-patterns) for detailed management.
+
+*Built with ❤️ by embracingearth.space*

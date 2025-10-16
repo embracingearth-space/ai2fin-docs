@@ -1,0 +1,400 @@
+# Transaction Management
+
+Comprehensive guide to managing transactions in AI2Fin, including viewing, editing, categorizing, and analyzing your financial data.
+
+## Overview
+
+Transaction Management is the core feature of AI2Fin, providing powerful tools to view, edit, categorize, and analyze all your financial transactions with AI-powered assistance.
+
+<CardGroup cols={2}>
+  <Card title="All Transactions View" icon="list">
+    Comprehensive transaction listing with advanced filters
+  </Card>
+  <Card title="AI Categorization" icon="brain">
+    Intelligent transaction categorization
+  </Card>
+  <Card title="Bulk Operations" icon="layers">
+    Process multiple transactions at once
+  </Card>
+  <Card title="Advanced Search" icon="search">
+    Powerful search and filtering capabilities
+  </Card>
+</CardGroup>
+
+## Accessing Transaction Management
+
+### From Dashboard
+
+1. **Click "All TXns"** in the sidebar
+2. **View Overview** of all transactions
+3. **Use Quick Actions** for common tasks
+
+### From Navigation
+
+1. **Sidebar Menu** → "All TXns"
+2. **Direct URL**: `/all-transactions`
+3. **Keyboard Shortcut**: Ctrl + T
+
+## Transaction Views
+
+### List View
+
+The default view showing all transactions in a table format:
+
+<AccordionGroup>
+  <Accordion title="Transaction Columns">
+    - **Date**: Transaction date
+    - **Description**: Transaction description
+    - **Amount**: Transaction amount
+    - **Type**: Income, expense, or transfer
+    - **Category**: Assigned category
+    - **Merchant**: Merchant or vendor
+    - **Tax Deductible**: Tax status
+    - **Actions**: Edit, delete, categorize
+  </Accordion>
+  
+  <Accordion title="Column Customization">
+    - **Show/Hide Columns**: Customize visible columns
+    - **Reorder Columns**: Drag to reorder
+    - **Column Width**: Adjust column widths
+    - **Save Layout**: Save your preferences
+  </Accordion>
+</AccordionGroup>
+
+### Categorized View
+
+Group transactions by category for better organization:
+
+<Steps>
+  <Step title="Switch to Categorized View">
+    Click the "Categorized" view toggle
+  </Step>
+  
+  <Step title="Expand Categories">
+    Click on category headers to expand/collapse
+  </Step>
+  
+  <Step title="View Category Totals">
+    See total amounts for each category
+  </Step>
+</Steps>
+
+### Monthly View
+
+View transactions organized by month:
+
+<CardGroup cols={2}>
+  <Card title="Monthly Totals" icon="calendar">
+    See spending by month
+  </Card>
+  <Card title="Trend Analysis" icon="chart-line">
+    Identify spending trends
+  </Card>
+</CardGroup>
+
+## Advanced Filtering
+
+### Filter Options
+
+<AccordionGroup>
+  <Accordion title="Date Filters">
+    - **Date Range**: Custom start and end dates
+    - **Quick Filters**: Today, This Week, This Month
+    - **Preset Ranges**: Last 30 days, Last 3 months
+    - **Custom Range**: Any date range
+  </Accordion>
+  
+  <Accordion title="Amount Filters">
+    - **Amount Range**: Min and max amounts
+    - **Transaction Type**: Income, expense, transfer
+    - **Currency**: Filter by currency
+    - **Tax Status**: Tax deductible or not
+  </Accordion>
+  
+  <Accordion title="Category Filters">
+    - **Category Selection**: Choose specific categories
+    - **Uncategorized**: Show only uncategorized transactions
+    - **Multiple Categories**: Select multiple categories
+    - **Category Groups**: Filter by category groups
+  </Accordion>
+</AccordionGroup>
+
+### Smart Search
+
+AI-powered search capabilities:
+
+<CardGroup cols={2}>
+  <Card title="Natural Language" icon="comment">
+    Search using natural language queries
+  </Card>
+  <Card title="Merchant Search" icon="store">
+    Find transactions by merchant name
+  </Card>
+  <Card title="Amount Search" icon="dollar-sign">
+    Search by amount ranges
+  </Card>
+  <Card title="Date Search" icon="calendar">
+    Search by date patterns
+  </Card>
+</CardGroup>
+
+## Transaction Operations
+
+### Individual Transaction Actions
+
+<Steps>
+  <Step title="Edit Transaction">
+    1. Click the edit icon on any transaction
+    2. Modify description, amount, category
+    3. Update tax deductibility
+    4. Save changes
+  </Step>
+  
+  <Step title="AI Categorize">
+    1. Click the AI categorize button
+    2. Review AI suggestions
+    3. Accept or modify category
+    4. Apply changes
+  </Step>
+  
+  <Step title="Delete Transaction">
+    1. Click the delete icon
+    2. Confirm deletion
+    3. Transaction is soft-deleted
+  </Step>
+</Steps>
+
+### Bulk Operations
+
+Process multiple transactions at once:
+
+<AccordionGroup>
+  <Accordion title="Bulk Categorization">
+    **Steps:**
+    1. Select multiple transactions
+    2. Click "Bulk AI Categorize"
+    3. Review AI suggestions
+    4. Apply to selected transactions
+    
+    **Benefits:**
+    - Save time on repetitive tasks
+    - Consistent categorization
+    - AI learns from your choices
+  </Accordion>
+  
+  <Accordion title="Bulk Edit">
+    **Features:**
+    - Edit multiple transactions
+    - Apply same category to multiple items
+    - Update tax status in bulk
+    - Modify descriptions
+    
+    **Use Cases:**
+    - Monthly recurring expenses
+    - Similar transactions
+    - Batch corrections
+  </Accordion>
+</AccordionGroup>
+
+## AI-Powered Features
+
+### Smart Categorization
+
+<CardGroup cols={2}>
+  <Card title="Automatic Detection" icon="eye">
+    AI identifies transaction types
+  </Card>
+  <Card title="Learning Algorithm" icon="brain">
+    Improves accuracy over time
+  </Card>
+  <Card title="Confidence Scoring" icon="target">
+    Shows confidence levels
+  </Card>
+  <Card title="Alternative Suggestions" icon="lightbulb">
+    Provides multiple options
+  </Card>
+</CardGroup>
+
+### Pattern Analysis Integration
+
+The transaction management integrates with Pattern Analysis:
+
+<Steps>
+  <Step title="Pattern Detection">
+    AI automatically detects recurring patterns
+  </Step>
+  
+  <Step title="Bill Linking">
+    Link transactions to recurring bills
+  </Step>
+  
+  <Step title="Anomaly Detection">
+    Flag unusual transactions
+  </Step>
+</Steps>
+
+## Column Customization
+
+### Available Columns
+
+<AccordionGroup>
+  <Accordion title="Core Columns">
+    - **Date**: Transaction date
+    - **Description**: Transaction description
+    - **Amount**: Transaction amount
+    - **Type**: Transaction type
+    - **Category**: Assigned category
+  </Accordion>
+  
+  <Accordion title="Additional Columns">
+    - **Merchant**: Merchant name
+    - **Reference**: Transaction reference
+    - **Tax Deductible**: Tax status
+    - **Percentage**: Business use percentage
+    - **CSV Source**: Import source
+  </Accordion>
+</AccordionGroup>
+
+### Customization Options
+
+1. **Show/Hide Columns**: Toggle column visibility
+2. **Reorder Columns**: Drag to reorder
+3. **Resize Columns**: Adjust column widths
+4. **Save Layout**: Save your preferences
+5. **Reset Layout**: Restore default layout
+
+## Performance Optimization
+
+### Pagination
+
+<Info>
+Large transaction lists use pagination for optimal performance.
+</Info>
+
+**Pagination Features:**
+- **Page Size**: 10, 25, 50, 100 transactions per page
+- **Navigation**: Previous/Next page buttons
+- **Jump to Page**: Direct page navigation
+- **Total Count**: See total transaction count
+
+### Virtual Scrolling
+
+For very large datasets:
+- **Virtual Scrolling**: Only render visible rows
+- **Smooth Scrolling**: Smooth navigation
+- **Performance**: Handles millions of transactions
+- **Memory Efficient**: Low memory usage
+
+## Export Options
+
+### Export Formats
+
+<CardGroup cols={2}>
+  <Card title="CSV Export" icon="file-csv">
+    Export to CSV format
+  </Card>
+  <Card title="Excel Export" icon="file-excel">
+    Export to Excel format
+  </Card>
+  <Card title="PDF Report" icon="file-pdf">
+    Generate PDF reports
+  </Card>
+  <Card title="JSON Export" icon="code">
+    Export raw data as JSON
+  </Card>
+</CardGroup>
+
+### Export Options
+
+<Steps>
+  <Step title="Select Transactions">
+    Choose transactions to export
+  </Step>
+  
+  <Step title="Choose Format">
+    Select export format
+  </Step>
+  
+  <Step title="Configure Options">
+    Set date range, columns, filters
+  </Step>
+  
+  <Step title="Download">
+    Download the exported file
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Slow Loading">
+    **Causes:**
+    - Large number of transactions
+    - Complex filters
+    - Network issues
+    
+    **Solutions:**
+    - Use date filters
+    - Reduce page size
+    - Check internet connection
+    - Clear browser cache
+  </Accordion>
+  
+  <Accordion title="Missing Transactions">
+    **Causes:**
+    - Date filters applied
+    - Category filters
+    - Search filters
+    
+    **Solutions:**
+    - Clear all filters
+    - Check date range
+    - Verify search terms
+    - Refresh the page
+  </Accordion>
+  
+  <Accordion title="AI Not Working">
+    **Causes:**
+    - OpenAI API key not set
+    - Service temporarily down
+    - Network connectivity
+    
+    **Solutions:**
+    - Check API configuration
+    - Verify service status
+    - Try again later
+    - Contact support
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+### Transaction Management
+
+<CardGroup cols={2}>
+  <Card title="Regular Review" icon="calendar">
+    Review transactions weekly
+  </Card>
+  <Card title="Quick Categorization" icon="bolt">
+    Use AI categorization for speed
+  </Card>
+  <Card title="Bulk Operations" icon="layers">
+    Process similar transactions together
+  </Card>
+  <Card title="Data Validation" icon="check">
+    Verify transaction accuracy
+  </Card>
+</CardGroup>
+
+### Performance Tips
+
+- **Use Filters**: Apply filters to reduce data load
+- **Batch Operations**: Process multiple transactions together
+- **Regular Cleanup**: Remove duplicate or incorrect transactions
+- **Optimize Columns**: Show only necessary columns
+
+---
+
+**Ready to learn more?** Explore [Smart Categorization](/features/smart-categorisation) or [Pattern Analysis](/features/pattern-analysis) for advanced features.
+
+*Built with ❤️ by embracingearth.space*

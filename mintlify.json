@@ -1,0 +1,142 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "AI2Fin Documentation",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.png",
+  "colors": {
+    "primary": "#0D9488",
+    "light": "#14B8A6",
+    "dark": "#0F766E",
+    "anchors": {
+      "from": "#0D9488",
+      "to": "#14B8A6"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@ai2fin.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://app.ai2fin.com"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://ai2fin.com/docs"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://ai2fin.com/community"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://ai2fin.com/blog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quick-start",
+        "platform-overview"
+      ]
+    },
+    {
+      "group": "Core Features",
+      "pages": [
+        "features/auto-type-detection",
+        "features/custom-rules",
+        "features/pattern-analysis",
+        "features/smart-categorisation",
+        "features/tax-analysis",
+        "features/recurring-patterns"
+      ]
+    },
+    {
+      "group": "Data Sources",
+      "pages": [
+        "data-sources/csv-imports",
+        "data-sources/bank-connectors",
+        "data-sources/agentic-workflows"
+      ]
+    },
+    {
+      "group": "Advanced Features",
+      "pages": [
+        "advanced/one-time-expenses",
+        "advanced/travel-expenses",
+        "advanced/allocations",
+        "advanced/ai-assist",
+        "advanced/exports"
+      ]
+    },
+    {
+      "group": "User Guides",
+      "pages": [
+        "guides/dashboard-navigation",
+        "guides/transaction-management",
+        "guides/category-setup",
+        "guides/tax-optimization",
+        "guides/reporting"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/authentication",
+        "api-reference/transactions",
+        "api-reference/categories",
+        "api-reference/ai-classification"
+      ]
+    },
+    {
+      "group": "Coming Soon",
+      "pages": [
+        "coming-soon/bank-feeds",
+        "coming-soon/advanced-analytics",
+        "coming-soon/subscription-management"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/ai2fin",
+    "github": "https://github.com/ai2fin",
+    "linkedin": "https://linkedin.com/company/ai2fin"
+  },
+  "seo": {
+    "title": "AI2Fin Documentation - AI-Powered Financial Management Platform",
+    "description": "Complete guide to AI2Fin's intelligent financial management platform. Learn about AI-powered expense tracking, tax optimization, and automated categorization.",
+    "keywords": [
+      "AI financial management",
+      "expense tracking software",
+      "tax deduction optimization",
+      "automated categorization",
+      "financial AI platform",
+      "business expense management",
+      "AI accounting software",
+      "smart financial analytics"
+    ],
+    "og": {
+      "title": "AI2Fin Documentation - AI-Powered Financial Management",
+      "description": "Master AI2Fin's intelligent financial management platform with comprehensive guides and tutorials.",
+      "image": "/og-image.png"
+    }
+  }
+}
