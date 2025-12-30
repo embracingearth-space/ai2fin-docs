@@ -6,6 +6,18 @@
     <title>AI2Fin Documentation - AI-Powered Financial Management Platform</title>
     <meta name="description" content="Complete guide to AI2Fin's intelligent financial management platform. Learn about AI-powered expense tracking, tax optimization, and automated categorization.">
     
+    <!-- PostHog Analytics Configuration -->
+    <!-- Set these via Cloudflare Pages environment variables or inject at build time -->
+    <script>
+      // PostHog configuration - inject env vars here or via build script
+      window.POSTHOG_KEY = ''; // Set via POSTHOG_KEY env var
+      window.POSTHOG_HOST = 'https://us.i.posthog.com'; // Set via POSTHOG_HOST env var
+      // Session recording enabled by default for marketing docs (no PII)
+      // Set to 'false' to disable: window.POSTHOG_SESSION_RECORDING = 'false';
+      window.POSTHOG_SESSION_RECORDING = 'true'; // Default: enabled
+    </script>
+    <script src="/posthog-init.js" async></script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         

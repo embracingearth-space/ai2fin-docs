@@ -138,5 +138,11 @@
       "description": "Master AI2Fin's intelligent financial management platform with comprehensive guides and tutorials.",
       "image": "/og-image.png"
     }
-  }
+  },
+  "scripts": [
+    {
+      "src": "/posthog-init.js",
+      "async": true
+    }
+  ]
 }
