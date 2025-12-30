@@ -128,4 +128,3 @@ This documentation is part of the AI2Fin platform. All rights reserved.
 
 ---
 
-**Built with ❤️ by embracingearth.space**
